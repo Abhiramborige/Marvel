@@ -1,0 +1,152 @@
+body {
+  margin: 2vw;
+  padding: 0px;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  height: 1000px;
+  width: 100%;
+}
+.m {
+  color: white;
+  font-family: "Marvel", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.div1 {
+  grid-area: 1 / 5 / 4 / 12;
+  background: white;
+  text-align: center;
+}
+#font {
+  font-weight: 1900; 
+  font-size: 1000%;
+  color: white;
+  background: rgb(211, 36, 36);
+  font-family: "Marvel", sans-serif;
+  margin: auto;
+  border: 3px solid black;
+}
+.div2 {
+  grid-area: 4 / 1 / 12 / 5;
+  background: url("https://i.pinimg.com/originals/3c/8a/7c/3c8a7c619945872e4c05d6433abb0758.jpg");
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div3 {
+  grid-area: 12 / 1 / 16 / 7;
+  background: url("https://www.mercurynews.com/wp-content/uploads/2020/03/Comic-16x9-1-1.jpg");
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div4 {
+  grid-area: 4 / 5 / 9 / 9;
+  background: url("https://www.pixel4k.com/wp-content/uploads/2020/02/captain-america-comic-art_1581356780-1536x864.jpg");
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div5 {
+  grid-area: 9 / 5 / 12 / 10;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/The_avengers_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid black;
+}
+.div6 {
+  grid-area: 4 / 9 / 9 / 12;
+  background: url("https://images.theconversation.com/files/121281/original/image-20160504-22761-1ye9foh.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip");
+  border: 3px solid black;
+  background-size: cover;
+}
+.div7 {
+  grid-area: 9 / 10 / 16 / 13;
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background: url("https://i.pinimg.com/736x/96/98/a5/9698a5d48b9fdb3a9bb49f1e5fa8958d.jpg");
+  background-size: cover;
+}
+.div8 {
+  grid-area: 12 / 7 / 16 / 10;
+  background: url("https://www.comicbookherald.com/wp-content/uploads/2018/06/new-ant-man-wasp-comics.jpeg");
+  border: 3px solid black;
+  background-size: cover;
+}
+.div9 {
+  grid-area: 4 / 12 / 9 / 16;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1ZXtltLj8KiYILXF4ETm1rdNYzSI_XHpZcg&usqp=CAU");
+  background-size: cover;
+  border: 3px solid black;
+  background-repeat: no-repeat;
+}
+.div10 {
+  grid-area: 9 / 13 / 16 / 16;
+  background: url("https://crushingkrisis.com/assets/captainmarvel-by-mckelvie-675x1024.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid black;
+}
+@media screen and (max-width: 800px) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+    height: 2800px;
+  }
+  #font
+  {
+    font-size: 10vw;
+    transform: translate(0%, 180%);
+  }
+  [class*="div"] {
+    height: 400px;
+    max-width: 100vw;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .div2
+  {
+    min-height:450px;
+  }
+  .div3
+  {
+    background-size: 125%;
+    max-height:200px;
+  }
+  .div4
+  {
+    background-size: 125%;
+    max-height:200px;
+  }
+  .div5
+  {
+    max-height:200px;
+  }
+  .div6
+  {
+    max-height:300px;
+  }
+  .div8
+  {
+    max-height:200px;
+  }
+  .div1{
+    max-height:200px;
+  }
+  .div7
+  {
+    min-height:400px;
+  }
+  .div9
+  {
+    max-height:200px;
+    background-size: 100vw 200px;
+  }
+}
