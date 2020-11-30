@@ -1,35 +1,29 @@
-var x = document.getElementsByClassName("m");
 
-function mouseOver(a, b, c, d, e, f, g, h, k) {
-    var x = document.getElementsByClassName("m");
-    for (var i = 0; i < arguments.length; i++) {
-        x[i].innerHTML = arguments[i];
-        x[i].style.opacity = "0.8";
-    }
-}
-function mouseOut() {
-    var x = document.getElementsByClassName("m");
-    for (var i = 0; i < x.length; i++) {
-        x[i].innerHTML = "";
-        x[i].style.opacity = "1.0";
-    }
-}
+var demo = [
+    "Hulk",
+    "Spiderman",
+    "Captain America",
+    "Logo",
+    "Black Panther",
+    "Iron Man",
+    "Ant Man",
+    "Thor",
+    "CaptainMarvel"
+];
 
-for (var i = 0; i < x.length; i++) {
-    x[i].onmouseover = function () {
-        mouseOver(
-            "Hulk",
-            "Spiderman",
-            "Captain America",
-            "Logo",
-            "Black Panther",
-            "Iron Man",
-            "Ant Man",
-            "Thor",
-            "CaptainMarvel"
-        );
-    };
-    x[i].onmouseout = function () {
-        mouseOut();
-    };
+var l = document.getElementsByClassName("image");
+
+for (let i=0;i<demo.length;i++) {
+    l[i].addEventListener("mouseover", function () {
+        this.style.opacity="0.8";
+        this.style.transform="scale(1.1)";
+        console.log(demo[i]);
+        this.innerHTML = demo[i];
+
+    });
+    l[i].addEventListener("mouseout", function () {
+        this.style.opacity="1.0";
+        this.style.transform="scale(1.0)";
+        this.innerHTML = "";
+    });
 }
